@@ -1,0 +1,35 @@
+{
+  "name": "dom-creator",
+  "version": "0.1.0",
+  "description": "A minimal zero-dependency TypeScript library for DSL-like creation and manipulation of DOM-Elements",
+  "repository": "https://github.com/nielsgts/dom-creator.git",
+  "author": "niels <niels.public.git@mail.fbdsk.de>",
+  "license": "MIT",
+  "private": false,
+  "main": "./dist/tsc/main.mjs",
+  "types": "./dist/tsc/main.d.mts",
+  "browser": "./dist/esbuild/browser.mjs",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/ --ext .js,.jsx,.mjs,.ts,.tsx,.mts",
+    "build": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist build",
+    "serve": "http-server",
+    "esbuild-browser": "esbuild src/main.mts --bundle --minify --sourcemap=external --outfile=dist/esbuild/browser.js",
+    "esbuild-browser:dev": "esbuild src/main.mts --bundle --outfile=dist/esbuild/browser.js",
+    "esbuild-browser:watch": "esbuild src/main.mts --bundle --watch --outfile=dist/esbuild/browser.js"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.5.0",
+    "@typescript-eslint/eslint-plugin": "^6.3.0",
+    "@typescript-eslint/parser": "^6.3.0",
+    "esbuild": "^0.19.1",
+    "eslint": "^8.47.0",
+    "http-server": "^14.1.1",
+    "jest": "^29.6.2",
+    "ts-jest": "^29.1.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

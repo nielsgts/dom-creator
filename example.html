@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>example</title>
+  <script type="module">
+    import {dc} from './dist/tsc/main.mjs';
+    
+    window.onload = function () {
+      let body = document.body;
+
+      dc.h1().id("headline").text("Headline").class("test").appendTo(body);
+      dc.wrap(body).append(
+        dc.div().text("Hello world!"),
+        dc.div().text("xyz").id("xyz"),
+        dc.c("button").attribute("type", "button").text("change").click(() => dc.id("xyz").text(" changed")));
+      };
+  </script>
+ </head>
+ <body>
+ </body>
+</html>
