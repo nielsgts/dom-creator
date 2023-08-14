@@ -15,6 +15,7 @@
     "build": "tsc -p tsconfig.json",
     "clean": "rm -rf dist build",
     "serve": "http-server",
+    "build-all": "yarn clean && yarn build && yarn esbuild-browser",
     "esbuild-browser": "esbuild src/main.mts --bundle --minify --sourcemap=external --outfile=dist/esbuild/browser.js",
     "esbuild-browser:dev": "esbuild src/main.mts --bundle --outfile=dist/esbuild/browser.js",
     "esbuild-browser:watch": "esbuild src/main.mts --bundle --watch --outfile=dist/esbuild/browser.js"
