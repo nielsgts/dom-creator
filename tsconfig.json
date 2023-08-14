@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2020",
     "module": "es2020",
+    "moduleResolution": "nodenext",
     "declaration": true,
     "strict": true,
     "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
